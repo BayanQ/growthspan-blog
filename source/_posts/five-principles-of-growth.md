@@ -9,7 +9,7 @@ tags:
   - principles
 categories:
   - Strategy
-cover: /img/home-bg.jpg
+cover: ""
 ---
 
 ## Introduction
