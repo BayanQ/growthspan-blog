@@ -1,6 +1,6 @@
 ---
 title: Welcome to Growth Blog
-subtitle: Growing Together
+subtitle: ""
 date: 2025-10-28 14:50:00
 author: Growthspan Team
 comment: true
