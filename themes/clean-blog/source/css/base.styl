@@ -175,10 +175,14 @@ hr.small
     h1
       font-size 70px
       font-weight 700
-    .subheading, .meta
+    h2
+      font-size 18px
+      font-weight 600
+      margin 10px 0 30px
+    .subheading, .meta, .post-subheading
       line-height 1.1
       display block
-    .subheading
+    .subheading, .post-subheading
       @extend .sans-serif
       font-size 18px
       margin 10px 0 30px
@@ -193,7 +197,9 @@ hr.small
     @media only screen and (min-width: 768px)
       h1
         font-size 70px
-      .subheading
+      h2
+        font-size 18px
+      .subheading, .post-subheading
         font-size 18px
 
 .post-preview
