@@ -6,9 +6,58 @@
   <meta name="robots" content="noindex" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Dynamically generate config based on deployment -->
+  <script>
+    // Detect which branch we're on based on the URL
+    const hostname = window.location.hostname;
+    let branch = 'master'; // Default to master for production
+
+    // If we're on a Netlify branch deploy, use the staging branch
+    // Branch deploys typically use the format: staging--site-name.netlify.app
+    if (hostname.startsWith('staging--') || hostname.includes('--staging')) {
+      branch = 'staging';
+    }
+
+    console.log(`Configuring Decap CMS for branch: ${branch} (hostname: ${hostname})`);
+
+    // Set global config before CMS loads
+    window.CMS_MANUAL_INIT = true;
+  </script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Initialize CMS with dynamic branch configuration
+    fetch('/admin/config.yml')
+      .then(response => response.text())
+      .then(configYaml => {
+        // Parse the YAML config
+        const config = jsyaml.load(configYaml);
+
+        // Update the branch based on our detection
+        const hostname = window.location.hostname;
+        const branch = (hostname.startsWith('staging--') || hostname.includes('--staging')) ? 'staging' : 'master';
+
+        config.backend.branch = branch;
+
+        // Initialize CMS with the updated config
+        initCMS({
+          config: config
+        });
+
+        console.log(`✓ Decap CMS initialized successfully on branch: ${branch}`);
+      })
+      .catch(error => {
+        console.error('Error initializing CMS:', error);
+        // Fallback to standard initialization
+        initCMS();
+      });
+  </script>
+
+  <!-- Load js-yaml for parsing the config -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </body>
 </html>
