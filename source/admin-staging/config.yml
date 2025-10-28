@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: staging
+
+# Uncomment this for local development/testing
+# local_backend: true
+
+media_folder: "source/images/uploads"
+public_folder: "/images/uploads"
+
+# Publish mode: editorial_workflow enables draft/review/publish workflow
+# publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "source/_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
+      - {label: "Author", name: "author", widget: "string", default: "Growthspan Team"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Cover Image", name: "cover", widget: "image", required: false, hint: "Header background image"}
+      - {label: "Share Cover", name: "share_cover", widget: "image", required: false, hint: "Image for social media sharing"}
+      - {label: "Enable Comments", name: "comment", widget: "boolean", default: true, required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "source/about/index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Configuration"
+        name: "config"
+        file: "_config.yml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Language", name: "language", widget: "string", default: "en"}
+          - {label: "Site URL", name: "url", widget: "string"}
+
+      - label: "Theme Configuration"
+        name: "theme-config"
+        file: "themes/clean-blog/_config.yml"
+        fields:
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - {label: "Home", name: "Home", widget: "string", default: "/"}
+              - {label: "Archives", name: "Archives", widget: "string", default: "/archives"}
+              - {label: "Tags", name: "Tags", widget: "string", default: "/tags"}
+              - {label: "Categories", name: "Categories", widget: "string", default: "/categories"}
+          - {label: "Menu Title", name: "menu_title", widget: "string"}
+          - {label: "Index Cover Image", name: "index_cover", widget: "string"}
+          - {label: "Default Post Title", name: "default_post_title", widget: "string"}
+          - {label: "Google Analytics ID", name: "google_analytics", widget: "string", required: false}
+          - {label: "Disqus Shortname", name: "disqus_shortname", widget: "string", required: false, hint: "For comments"}
+          - {label: "Twitter URL", name: "twitter_url", widget: "string", required: false}
+          - {label: "Twitter Handle", name: "twitter_handle", widget: "string", required: false}
+          - {label: "Facebook URL", name: "facebook_url", widget: "string", required: false}
+          - {label: "GitHub URL", name: "github_url", widget: "string", required: false}
+          - {label: "LinkedIn URL", name: "linkedin_url", widget: "string", required: false}
