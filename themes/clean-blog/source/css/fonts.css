@@ -10,15 +10,7 @@
 @font-face {
   font-family: 'PP Formula';
   src: url('/fonts/PPFormula-SemiExtendedBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PP Formula';
-  src: url('/fonts/PPFormula-Extrabold.woff2') format('woff2');
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
