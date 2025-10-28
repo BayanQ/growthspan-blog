@@ -1,0 +1,22 @@
+# Hexo generated files
+public/
+.deploy*/
+db.json
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# IDE
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Hexo cache
+.hexo/
