@@ -1,80 +1,19 @@
-<hr />
-
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <% if (theme.twitter_url) { %>
-                        <li>
-                            <a href="<%- theme.twitter_url%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-
-                    <% if (theme.facebook_url) { %>
-                        <li>
-                            <a href="<%- theme.facebook_url%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-
-                    <% if (theme.github_url) { %>
-                        <li>
-                            <a href="<%- theme.github_url%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-
-                    <% if (theme.linkedin_url) { %>
-                        <li>
-                            <a href="<%- theme.linkedin_url%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-
-                    <% if (theme.mailto) { %>
-                        <li>
-                            <a href="mailto:<%- theme.mailto%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-
-                    <% if (theme.gitlab_url) { %>
-                        <li>
-                            <a href="<%- theme.gitlab_url%>" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    <% } %>
-                </ul>
-                <p class="copyright text-muted">&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br></p>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+<footer class="footer7_component">
+    <div class="padding-global">
+        <div class="container-large">
+            <div class="padding-bottom padding-xxlarge">
+                <div class="padding-bottom padding-xxlarge">
+                    <div class="footer7_top-wrapper">
+                        <a href="<%- config.root %>" aria-label="GrowthSpan" id="w-node-b682af26-8597-a065-b890-8214245c337d-d886f845" class="footer7_logo-link w-nav-brand">
+                            <img loading="lazy" src="https://cdn.prod.website-files.com/680bc055c7338845d886f83c/6810ee10da93abd6c198444e_GrowthSpan%20Logo-white%20svg.svg" alt="GrowthSpan logo white" class="footer7_logo">
+                        </a>
+                    </div>
+                </div>
+                <p class="paragraph">Copyright © <%= date(new Date(), 'YYYY') %> GrowthSpan.<span class="line-break is-tablet"> </span>All rights reserved.</p>
+                <a href="/privacy-policy" class="link-2">Privacy Policy</a>
+                <a href="/terms-of-use" class="link">Terms of Use</a>
+                <a href="/dpa" class="link">Data Processing Agreement</a>
             </div>
         </div>
     </div>
