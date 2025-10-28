@@ -4,9 +4,6 @@ menu:
   Archives: /archives
   Tags: /tags
   Categories: /categories
-  Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
-    icon: github
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: Configurable Title
@@ -40,7 +37,7 @@ favicon: /img/favicon.png
 twitter_url:
 twitter_handle:
 facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
+github_url:
 gitlab_url:
 linkedin_url:
 mailto:
