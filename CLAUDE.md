@@ -43,6 +43,11 @@ Deployment is automatic via Netlify when pushing to the master branch. Netlify r
 ├── netlify.toml                # Netlify deployment config
 ├── source/                     # Content source files
 │   ├── _posts/                 # Blog posts (Markdown)
+│   ├── admin/                  # Decap CMS admin interface
+│   │   ├── index.html          # CMS entry point
+│   │   └── config.yml          # CMS configuration
+│   ├── images/                 # Image assets
+│   │   └── uploads/            # CMS uploaded images
 │   ├── tags/                   # Tags page
 │   ├── categories/             # Categories page
 │   └── about/                  # About page
@@ -96,6 +101,14 @@ comment: false                 # Optional: disable comments
 - Static pages live in `source/[page-name]/index.md`
 - Use `layout: page` in front matter
 - Examples: about, contact, custom pages
+
+**Decap CMS (Visual Editor):**
+- Access at `/admin` on the deployed site (e.g., https://growthspan-blog.netlify.app/admin)
+- Configuration: `source/admin/config.yml`
+- Uses GitHub OAuth for authentication
+- Provides visual editor for posts, pages, and site settings
+- Uploads images to `source/images/uploads/`
+- Changes are committed directly to the GitHub repository
 
 ### Theme System
 

@@ -38,6 +38,26 @@ hexo new page "page-name"
 
 Posts are created in `source/_posts/` and support Markdown with front matter.
 
+### Using the Visual Editor (Decap CMS)
+
+This blog includes Decap CMS for a visual editing experience. Access it at:
+
+**Production:** https://growthspan-blog.netlify.app/admin
+
+**First Time Setup:**
+
+1. Visit `/admin` on your deployed site
+2. Click "Login with GitHub"
+3. Authorize the application
+4. Start creating and editing posts visually!
+
+**Features:**
+- Rich text editor with live preview
+- Image upload and management
+- Draft/publish workflow
+- Edit site settings
+- No need to use command line
+
 ### Building
 
 Generate static files:
