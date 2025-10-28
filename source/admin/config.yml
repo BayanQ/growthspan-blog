@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: BayanQ/growthspan-blog
+  name: git-gateway
   branch: master
 
 # Uncomment this for local development/testing
