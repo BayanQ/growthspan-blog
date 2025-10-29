@@ -13,11 +13,12 @@
                 <div class="navbar-logo">
                     <style>
                         .navbar-brand {
-                            position: absolute;
+                            position: fixed;
                             left: 20px;
-                            top: 50%;
+                            top: 48px;
                             transform: translateY(-50%);
                             padding: 0;
+                            z-index: 1000;
                         }
                         .navbar-logo {
                             width: 180px;
@@ -29,7 +30,9 @@
                         }
                         @media only screen and (min-width: 768px) {
                             .navbar-brand {
+                                position: absolute;
                                 left: 110px;
+                                top: 50%;
                             }
                             .navbar-logo {
                                 width: 300px;
