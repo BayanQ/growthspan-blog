@@ -4,7 +4,9 @@
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "22.21.0"
+  # CVE-2026-111497 ("Node2Shell"): OOB write in Node's bundled Brotli
+  # decoder, CVSS v4.0 9.2 CRITICAL, fixed upstream in v22.23.4.
+  NODE_VERSION = "22.23.4"
 
 # Branch deploy configuration
 [context.staging]
